@@ -2,6 +2,8 @@ package hw_3;
 
 import javax.xml.soap.SOAPPart;
 import java.util.Arrays;
+import java.util.Scanner;
+
 public class MainHw {
 
     public static void main(String[] args){
@@ -17,8 +19,10 @@ public class MainHw {
         System.out.println(Arrays.toString(arr));
 
         mimMaxNamber(); //6
-        int[] arrey = {4,3,1,7,3,1,5,6};
-        //equalParts( arrey); //7
+        int[] arrey = {4,3,1,1,1,1,2,3};
+       Boolean result = equalParts( arrey); //7
+
+        arrayОffset(arrey); //8 тут у меня ерунда получилась
         }
         /**
          *целочисленный массив, состоящий из элементов 0 и 1.
@@ -130,16 +134,54 @@ public class MainHw {
             int sumleft = 0;
             int sumright  =0;
             for (int i = 0; i < arrey.length; i++) {
+                sumright  =0;
                 sumleft = sumleft+ arrey[i];
-                //System.out.println(sumleft);
-                for (int j = arrey.length; j > i ; j--) {
-                    sumright = sumright+ arrey[i];
+
+                for (int j = i+1; j < arrey.length ; j++) {
+                    sumright = sumright+ arrey[j];
                 }
                 if(sumleft == sumright){
+
                     return true;
                 }
-                sumright  =0;
+
+                }
+            return false;
             }
+/**
+ * Написать метод, которому на вход подается одномерный массив и число n
+ * (может быть положительным, или отрицательным), при этом метод должен
+ * сместить все элементы массива на n позиций. Элементы смещаются циклично.
+ * Для усложнения задачи нельзя пользоваться вспомогательными массивами.
+ * Примеры: [ 1, 2, 3 ] при n = 1 (на один вправо) -> [ 3, 1, 2 ]; [ 3, 5, 6, 1]
+ * при n = -2 (на два влево) -> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете выбирать сами.
+ * */
+        public static void arrayОffset(int[] arrey) {
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Введите число от -5 до 5 для смещения массива");
+    int q = scanner.nextInt(); //{4,3,1,1,1,1,2,3}
+    int buffer = 0;
+
+    if (q < 0) {
+        for (int i = 0; i < arrey.length; i++) {
+
+        }
+    } else if (q > 0) {
+        for (int i = 0; i <= q - 1; i++) {
+            for (int j = 0; j < q - i; j++) {
+                if (arrey[j] > arrey[j + 1]) {
+
+                    buffer = arrey[j];
+                    arrey[j] = arrey[j + 1];
+                    arrey[j + 1] = buffer;
+
+                }
+            }
+        }
+    }
+    System.out.println(Arrays.toString(arrey));
+    }
 
 }
 

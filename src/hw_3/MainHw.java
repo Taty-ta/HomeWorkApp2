@@ -22,7 +22,7 @@ public class MainHw {
         int[] arrey = {4,3,1,1,1,1,2,3};
        Boolean result = equalParts( arrey); //7
 
-        arrayОffset(arrey); //8 тут у меня ерунда получилась
+        //arrayОffset(arrey); //8 тут у меня ерунда получилась потом подумаю
         }
         /**
          *целочисленный массив, состоящий из элементов 0 и 1.

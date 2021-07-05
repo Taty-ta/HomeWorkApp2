@@ -27,6 +27,7 @@ public class Main {
         animals[i].swim(disSwim);
          }
          // * Добавить подсчет созданных котов, собак и животных.
+
             System.out.println("Создано котов - " + Cat.getCount());
             System.out.println("Создано собак - " + Dog.getCount() );
             System.out.println("Создано диких собак - " + Hunter_dog.getCount() );

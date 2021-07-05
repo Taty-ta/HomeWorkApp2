@@ -11,6 +11,7 @@ public class Hunter_dog extends Dog{
         return count;
     }
 
+
     @Override
     public void swim(int dis) {
         super.swim(dis);

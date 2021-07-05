@@ -25,7 +25,9 @@ public class Main {
          for (int i = 0; i< animals.length; i++){
         animals[1].run(disRun);
         animals[i].swim(disSwim);
+
          }
+
          // * Добавить подсчет созданных котов, собак и животных.
 
             System.out.println("Создано котов - " + Cat.getCount());

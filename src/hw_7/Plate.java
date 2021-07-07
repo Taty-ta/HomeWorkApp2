@@ -22,5 +22,4 @@ public class Plate {
         System.out.println();
     }
 
-
 }

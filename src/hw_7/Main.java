@@ -9,6 +9,7 @@ public class Main {
         while (command > 0) {
 
             Plate plate = new Plate(command);
+
             Cat[] cat = {
                     new Cat("Barsik", 5),
                     new Cat("Murzik", 6),

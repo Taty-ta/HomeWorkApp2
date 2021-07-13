@@ -24,6 +24,7 @@ public  class Animal {
     public  void run(int dis){
 
     }
+
     public  void swim(int dis){
         //System.out.printf("%s %s %d \n", name, color, age);
     }

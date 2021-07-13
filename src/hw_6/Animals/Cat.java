@@ -16,6 +16,7 @@ public class Cat extends Animal {
         return count;
     }
 
+
     @Override
     public void run(int dis) {
         super.run(dis);

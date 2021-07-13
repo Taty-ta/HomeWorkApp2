@@ -27,6 +27,7 @@ public  class Dog extends Animal {
             System.out.println(name + " " + dis+ " отказался бежать");
         }
     }
+
     @Override
     public  void swim(int dis) {
         super.swim(dis);
